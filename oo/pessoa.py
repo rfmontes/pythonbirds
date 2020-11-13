@@ -20,3 +20,11 @@ if __name__ == '__main__':
     print(rafael.nome, rafael.idade, rafael.parentesco)
     for familia in rafael.familia:
         print(familia.nome, familia.idade, familia.parentesco)
+    rafael.sobrenome = 'Fernandes'
+    print(rafael.nome, rafael.sobrenome)
+    print(rafael.__dict__)
+    print(angelica.__dict__)
+    del rafael.sobrenome
+    print(rafael.__dict__)
+    print(angelica.__dict__)
+
