@@ -1,4 +1,6 @@
 class Pessoa:
+    olhos = 2  # como esse é um valor comum entre pessoas ele pode ser definido como atributo de classe
+
     def __init__(self, *familia, nome=None, idade=30, parentesco=None):
         self.nome = nome
         self.idade = idade
@@ -27,4 +29,14 @@ if __name__ == '__main__':
     del rafael.sobrenome
     print(rafael.__dict__)
     print(angelica.__dict__)
+    print(angelica.olhos)
+    print(rafael.olhos)
+    rafael.olhos = 1
+    print(angelica.olhos)
+    print(rafael.olhos)
+    print(id(angelica.olhos), id(angelica.olhos), id(Pessoa.olhos))
+    del rafael.olhos
+    print(angelica.olhos)
+    print(rafael.olhos)
+    print(id(angelica.olhos), id(angelica.olhos), id(Pessoa.olhos))
 
