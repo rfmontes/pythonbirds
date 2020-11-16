@@ -19,11 +19,15 @@ class Pessoa:
         return f'{cls} - olhos {cls.olhos}'
 
 
+class Homem(Pessoa):
+    pass
+
+
 if __name__ == '__main__':
     alice = Pessoa(nome='Alice', idade=2, parentesco='filha')
     bella = Pessoa(nome='Bella', idade=0, parentesco='filha')
     angelica = Pessoa(nome='Angelica', idade=28, parentesco='Esposa')
-    rafael = Pessoa(alice, bella, angelica, nome='Rafael', idade=28, parentesco='Pai')
+    rafael = Homem(alice, bella, angelica, nome='Rafael', idade=28, parentesco='Pai')
     print(Pessoa.cumprimentar(rafael))
     print(id(rafael))
     print(rafael.cumprimentar())
