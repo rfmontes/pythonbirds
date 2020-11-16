@@ -23,11 +23,16 @@ class Homem(Pessoa):
     pass
 
 
+class Mutante(Pessoa):
+    olhos = 3
+
+
 if __name__ == '__main__':
     alice = Pessoa(nome='Alice', idade=2, parentesco='filha')
     bella = Pessoa(nome='Bella', idade=0, parentesco='filha')
     angelica = Pessoa(nome='Angelica', idade=28, parentesco='Esposa')
     rafael = Homem(alice, bella, angelica, nome='Rafael', idade=28, parentesco='Pai')
+    mutante = Mutante(nome='Mutante')
     print(Pessoa.cumprimentar(rafael))
     print(id(rafael))
     print(rafael.cumprimentar())
@@ -53,4 +58,4 @@ if __name__ == '__main__':
     print(id(angelica.olhos), id(angelica.olhos), id(Pessoa.olhos))
     print(Pessoa.metodo_estatico(), rafael.metodo_estatico())
     print(Pessoa.nome_e_atributos_de_clase(), rafael.nome_e_atributos_de_clase())
-
+    print(mutante.olhos)
